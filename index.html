@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Arumuga Raj | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Arumugaraj | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #0b1120;
       color: #e5e7eb;
       line-height: 1.6;
     }
 
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      background: #020617;
+      position: sticky;
+      top: 0;
+    }
+    nav h2 { color: #38bdf8; margin: 0; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a { color: #cbd5f5; text-decoration: none; }
+
     header {
-      padding: 90px 20px;
-      text-align: center;
-      background: linear-gradient(180deg, #020617, #0f172a);
+      padding: 90px 40px;
+      max-width: 1200px;
+      margin: auto;
     }
-
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 20px;
-      color: #94a3b8;
-    }
+    header h1 { font-size: 46px; }
+    header h3 { color: #38bdf8; font-weight: 500; }
+    header p { max-width: 900px; color: #94a3b8; }
 
     .btn {
       display: inline-block;
-      margin: 15px 8px;
       padding: 12px 26px;
+      margin: 10px 10px 0 0;
       border-radius: 6px;
       text-decoration: none;
-      font-weight: bold;
-      color: white;
+      font-weight: 600;
+      color: #fff;
     }
-
-    .btn-email {
-      background: #2563eb;
-    }
-
-    .btn-linkedin {
-      background: #0a66c2;
-    }
+    .btn-primary { background: #2563eb; }
+    .btn-secondary { background: #1e293b; }
+    .btn-resume { background: #16a34a; }
 
     section {
-      max-width: 950px;
+      max-width: 1200px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 60px 40px;
     }
-
     h2 {
-      margin-bottom: 25px;
       border-bottom: 2px solid #2563eb;
       display: inline-block;
       padding-bottom: 6px;
+      margin-bottom: 25px;
     }
 
     .skills span {
       display: inline-block;
       background: #1e293b;
-      padding: 10px 16px;
+      padding: 8px 12px;
       margin: 6px;
       border-radius: 6px;
       font-size: 14px;
     }
 
-    .project {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 15px;
+    .box {
+      background: #020617;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
     footer {
@@ -84,104 +91,117 @@
       color: #94a3b8;
       font-size: 14px;
     }
-
-    a {
-      color: #38bdf8;
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Arumuga Raj</h1>
-    <p>Embedded | IoT | Software Developer</p>
+<!-- NAV -->
+<nav>
+  <h2>AR Avatar</h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Experience</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 
-    <a class="btn btn-email" href="mailto:raj.rgpc9@gmail.com">
-      Contact Me
-    </a>
+<!-- HERO -->
+<header>
+  <h1>ARUMUGARAJ</h1>
+  <h3>Embedded Systems | IoT | Firmware Engineer</h3>
 
-    <a class="btn btn-linkedin"
-       href="https://linkedin.com/in/arumugaraj07"
-       target="_blank">
-      LinkedIn
-    </a>
-  </header>
+  <p>
+    Experienced embedded product development professional with strong analytical
+    skills and deep knowledge of electronics, firmware, and system design.
+    Adept at root-cause analysis, troubleshooting, and delivering reliable,
+    production-ready solutions.
+  </p>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am a passionate developer with experience in embedded systems,
-      IoT solutions, and software development. I enjoy solving real-world
-      problems, working with hardware and firmware, and continuously
-      improving my technical skills.
-    </p>
-  </section>
+  <a class="btn btn-primary" href="mailto:raj.rgpc9@gmail.com">Contact Me</a>
+  <a class="btn btn-secondary" href="https://linkedin.com/in/arumugaraj-cts-712515211" target="_blank">LinkedIn</a>
+  <a class="btn btn-resume" href="Arumugaraj-Resume.pdf" download>Download Resume</a>
+</header>
 
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>C</span>
-      <span>C++</span>
-      <span>Embedded Systems</span>
-      <span>IoT</span>
-      <span>BLE</span>
-      <span>Python</span>
-      <span>Git</span>
-      <span>Linux</span>
-    </div>
-  </section>
+<!-- SKILLS -->
+<section>
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <span>C</span><span>C++</span><span>SPI</span><span>UART</span><span>I2C</span>
+    <span>WiFi</span><span>Bluetooth</span><span>BLE</span>
+    <span>Segger Embedded Studio</span><span>Keil</span><span>IAR</span>
+    <span>Arduino</span><span>Python (Basics)</span>
+    <span>nRF52832</span><span>nRF52840</span><span>MSP430</span>
+    <span>Raspberry Pi</span><span>NodeMCU</span>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section>
-    <h2>Projects</h2>
+<!-- EXPERIENCE -->
+<section>
+  <h2>Professional Experience</h2>
 
-    <div class="project">
-      <h3>BLE Based Embedded Device</h3>
-      <p>
-        Developed BLE firmware using nRF controllers and
-        Segger Embedded Studio for wireless communication.
-      </p>
-    </div>
+  <div class="box">
+    <h3>Assistant Manager – Titan Company Limited (2020 – Present)</h3>
+    <ul>
+      <li>Managed product development from concept to mass production</li>
+      <li>Designed and developed prototypes to validate concepts</li>
+      <li>Led cross-functional teams across design, vendors, and marketing</li>
+      <li>Handled PRDs, roadmaps, budgeting, and vendor negotiations</li>
+    </ul>
+  </div>
 
-    <div class="project">
-      <h3>IoT Monitoring System</h3>
-      <p>
-        Built an IoT-based sensor monitoring solution with
-        cloud integration for real-time data visualization.
-      </p>
-    </div>
+  <div class="box">
+    <h3>Technical Executive – Titan Company Limited (2016 – 2020)</h3>
+    <ul>
+      <li>Worked on BLE, Bluetooth, and IoT product architectures</li>
+      <li>Embedded firmware development and hardware integration</li>
+      <li>PCB fabrication, assembly, testing, and troubleshooting</li>
+      <li>ADC programming and MCU synchronization</li>
+    </ul>
+  </div>
 
-  </section>
+  <div class="box">
+    <h3>Engineer – Aqua Sub Engineering (2012 – 2013)</h3>
+    <ul>
+      <li>Preventive and breakdown maintenance</li>
+      <li>Electrical panels, PLC wiring, motor control systems</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section>
-    <h2>Contact</h2>
+<!-- EDUCATION -->
+<section>
+  <h2>Education</h2>
+  <div class="box">
+    <p><strong>B.E – Electrical & Electronics Engineering</strong><br>JKK College, Erode</p>
+    <p><strong>Diploma – Electrical & Electronics Engineering</strong><br>RGP College, Erode</p>
+  </div>
+</section>
 
-    <p>
-      📧 Email:
-      <strong>raj.rgpc9@gmail.com</strong>
-    </p>
+<!-- PATENTS -->
+<section>
+  <h2>Patents & Awards</h2>
+  <div class="box">
+    <ul>
+      <li>4 patents completed & 4 under process</li>
+      <li>UNLIKE Award – Piloted Technologies</li>
+      <li>Dream Team Nominee – 2018</li>
+      <li>Multiple patented systems for lens analysis & IoT monitoring</li>
+    </ul>
+  </div>
+</section>
 
-    <p>
-      🔗 LinkedIn:
-      <a href="https://linkedin.com/in/arumugaraj07" target="_blank">
-        linkedin.com/in/arumugaraj07
-      </a>
-    </p>
+<!-- CONTACT -->
+<section>
+  <h2>Contact</h2>
+  <p>Email: <strong>raj.rgpc9@gmail.com</strong></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/arumugaraj-cts-712515211" target="_blank">View Profile</a></p>
+</section>
 
-    <a class="btn btn-email" href="mailto:raj.rgpc9@gmail.com">
-      Send Email
-    </a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Arumuga Raj · Portfolio Website
-  </footer>
+<footer>
+  © 2025 Arumugaraj · Portfolio
+</footer>
 
 </body>
 </html>
