@@ -4,117 +4,184 @@
   <meta charset="UTF-8" />
   <title>Arumuga Raj | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #0f172a;
       color: #e5e7eb;
+      line-height: 1.6;
     }
+
     header {
-      padding: 80px 20px;
+      padding: 90px 20px;
       text-align: center;
+      background: linear-gradient(180deg, #020617, #0f172a);
     }
+
     header h1 {
       font-size: 48px;
       margin-bottom: 10px;
     }
+
     header p {
       font-size: 20px;
       color: #94a3b8;
     }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
+
+    .btn {
+      display: inline-block;
+      margin: 15px 8px;
+      padding: 12px 26px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
     }
+
+    .btn-email {
+      background: #2563eb;
+    }
+
+    .btn-linkedin {
+      background: #0a66c2;
+    }
+
+    section {
+      max-width: 950px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
     h2 {
+      margin-bottom: 25px;
       border-bottom: 2px solid #2563eb;
       display: inline-block;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
+      padding-bottom: 6px;
     }
+
     .skills span {
       display: inline-block;
       background: #1e293b;
-      padding: 10px 15px;
+      padding: 10px 16px;
       margin: 6px;
       border-radius: 6px;
+      font-size: 14px;
     }
+
     .project {
       background: #1e293b;
       padding: 20px;
       border-radius: 8px;
       margin-bottom: 15px;
     }
-    a.button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-    }
+
     footer {
       text-align: center;
       padding: 30px;
       background: #020617;
       color: #94a3b8;
+      font-size: 14px;
+    }
+
+    a {
+      color: #38bdf8;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Arumuga Raj</h1>
-  <p>Embedded | IoT | Software Developer</p>
-  <a class="button" href="mailto:yourgmail@gmail.com">Contact Me</a>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h1>Arumuga Raj</h1>
+    <p>Embedded | IoT | Software Developer</p>
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    I am a passionate developer working on embedded systems, IoT,
-    and software projects. I enjoy building real-world solutions
-    and continuously learning new technologies.
-  </p>
-</section>
+    <a class="btn btn-email" href="mailto:raj.rgpc9@gmail.com">
+      Contact Me
+    </a>
 
-<section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>C</span>
-    <span>C++</span>
-    <span>Embedded Systems</span>
-    <span>IoT</span>
-    <span>Python</span>
-    <span>Git</span>
-  </div>
-</section>
+    <a class="btn btn-linkedin"
+       href="https://linkedin.com/in/arumugaraj07"
+       target="_blank">
+      LinkedIn
+    </a>
+  </header>
 
-<section>
-  <h2>Projects</h2>
-  <div class="project">
-    <h3>BLE Based Device</h3>
-    <p>Developed BLE firmware using nRF and Segger Embedded Studio.</p>
-  </div>
-  <div class="project">
-    <h3>IoT Monitoring System</h3>
-    <p>Sensor data monitoring with cloud integration.</p>
-  </div>
-</section>
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I am a passionate developer with experience in embedded systems,
+      IoT solutions, and software development. I enjoy solving real-world
+      problems, working with hardware and firmware, and continuously
+      improving my technical skills.
+    </p>
+  </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: <strong>yourgmail@gmail.com</strong></p>
-  <a class="button" href="mailto:yourgmail@gmail.com">Send Email</a>
-</section>
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>C</span>
+      <span>C++</span>
+      <span>Embedded Systems</span>
+      <span>IoT</span>
+      <span>BLE</span>
+      <span>Python</span>
+      <span>Git</span>
+      <span>Linux</span>
+    </div>
+  </section>
 
-<footer>
-  © 2025 Arumuga Raj | Portfolio
-</footer>
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>BLE Based Embedded Device</h3>
+      <p>
+        Developed BLE firmware using nRF controllers and
+        Segger Embedded Studio for wireless communication.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>IoT Monitoring System</h3>
+      <p>
+        Built an IoT-based sensor monitoring solution with
+        cloud integration for real-time data visualization.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Contact</h2>
+
+    <p>
+      📧 Email:
+      <strong>raj.rgpc9@gmail.com</strong>
+    </p>
+
+    <p>
+      🔗 LinkedIn:
+      <a href="https://linkedin.com/in/arumugaraj07" target="_blank">
+        linkedin.com/in/arumugaraj07
+      </a>
+    </p>
+
+    <a class="btn btn-email" href="mailto:raj.rgpc9@gmail.com">
+      Send Email
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Arumuga Raj · Portfolio Website
+  </footer>
 
 </body>
 </html>
