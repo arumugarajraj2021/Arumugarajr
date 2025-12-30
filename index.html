@@ -2,116 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Arumugaraj | Manager – Technical</title>
+  <title>Core Competencies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     :root {
-      --bg: #020617;
-      --page: #0b1120;
-      --card: #020617;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --btn: #2563eb;
-      --green: #16a34a;
+      --blue: #0b5ed7;
+      --bg: #f6f9fc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e5e7eb;
     }
-
-    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      font-family: Inter, system-ui, Arial, sans-serif;
-      background: var(--page);
+      font-family: "Segoe UI", system-ui, Arial, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
     }
 
+    /* NAV (simple demo) */
     nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 18px 48px;
-      background: rgba(2,6,23,0.9);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav strong { color: var(--accent); }
-    nav a {
-      color: var(--muted);
-      margin-left: 28px;
-      text-decoration: none;
-      font-weight: 500;
+      gap: 16px;
+      padding: 14px 32px;
+      background: white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     }
 
-    .hero {
-      max-width: 900px;
-      margin: auto;
-      padding: 140px 40px 100px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: 0.8s ease;
-    }
-    .hero.show { opacity: 1; transform: translateY(0); }
-
-    .hero h1 { font-size: 56px; margin-bottom: 8px; }
-    .hero h2 { color: var(--accent); font-weight: 500; }
-
-    .hero p { color: var(--muted); margin-top: 20px; }
-
-    .btn {
-      display: inline-block;
-      margin: 26px 12px 0 0;
-      padding: 14px 30px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
+    .logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--blue);
       color: white;
-      background: var(--btn);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
     }
-    .btn.secondary { background: #1e293b; }
 
-    section {
+    nav h2 {
+      margin: 0;
+      color: var(--blue);
+      font-size: 18px;
+    }
+
+    /* PAGE */
+    .page {
       max-width: 1100px;
       margin: auto;
-      padding: 100px 40px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: 0.8s ease;
-    }
-    section.show { opacity: 1; transform: translateY(0); }
-
-    h3.section-title {
-      font-size: 28px;
-      margin-bottom: 30px;
-      border-left: 4px solid var(--accent);
-      padding-left: 14px;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 28px;
-      border-radius: 18px;
-      margin-bottom: 20px;
-    }
-
-    .pill span {
-      display: inline-block;
-      background: #1e293b;
-      color: #cbd5f5;
-      padding: 8px 14px;
-      margin: 6px;
-      border-radius: 999px;
-      font-size: 13px;
-    }
-
-    footer {
+      padding: 80px 24px;
       text-align: center;
-      padding: 40px;
-      background: var(--bg);
+    }
+
+    .page h1 {
+      font-size: 36px;
+      color: var(--blue);
+      margin-bottom: 40px;
+    }
+
+    /* TAB SWITCH */
+    .tabs {
+      display: inline-flex;
+      background: white;
+      border-radius: 999px;
+      padding: 6px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 50px;
+    }
+
+    .tab {
+      padding: 14px 28px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
       color: var(--muted);
+      transition: 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .tab.active {
+      background: var(--blue);
+      color: white;
+      box-shadow: 0 6px 20px rgba(11,94,215,0.4);
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      text-align: left;
+      font-size: 26px;
+      color: var(--blue);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* SKILLS GRID */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 20px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 500;
+      color: #334155;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    }
+
+    /* CONTENT */
+    .content {
+      display: none;
+      text-align: left;
+      animation: fade 0.4s ease;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -119,145 +140,71 @@
 <body>
 
 <nav>
-  <strong>AR Avatar</strong>
-  <div>
-    <a href="#home">Home</a>
-    <a href="#experience">Experience</a>
-    <a href="#patents">Patents</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <div class="logo">SB</div>
+  <h2>SANTHOSH BALAJI A R</h2>
 </nav>
 
-<!-- HERO -->
-<div class="hero observe" id="home">
-  <h1>ARUMUGARAJ</h1>
-  <h2>Manager – Technical | Embedded Systems | IoT</h2>
+<div class="page">
 
-  <p>
-    Experienced in embedded product development with strong analytical skills and
-    deep knowledge of physics, electronics, and system design.
-    Adept at root-cause analysis, problem-solving, and delivering production-ready solutions.
-  </p>
+  <h1>Core Competencies</h1>
 
-  <a class="btn" href="#experience">View Experience</a>
-  <a class="btn secondary" href="mailto:raj.rgpc9@gmail.com">Email</a>
+  <!-- TABS -->
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('tech')">Technical Stack</div>
+    <div class="tab" onclick="switchTab('ai')">AI/ML & Cognitive</div>
+    <div class="tab" onclick="switchTab('cloud')">Cloud & Infrastructure</div>
+  </div>
+
+  <!-- TECH STACK -->
+  <div id="tech" class="content active">
+    <div class="section-title">⌘ Technical Stack</div>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">Flask</div>
+      <div class="skill">Django</div>
+      <div class="skill">React & UI/UX</div>
+      <div class="skill">SQL</div>
+      <div class="skill">HTML / CSS / JS</div>
+      <div class="skill">PowerShell</div>
+      <div class="skill">Git</div>
+      <div class="skill">GitHub</div>
+      <div class="skill">VS Code</div>
+      <div class="skill">Jupyter Notebook</div>
+    </div>
+  </div>
+
+  <!-- AI/ML -->
+  <div id="ai" class="content">
+    <div class="section-title">🤖 AI / ML & Cognitive</div>
+    <div class="skills">
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Predictive Analytics</div>
+      <div class="skill">Automation</div>
+      <div class="skill">Data Processing</div>
+    </div>
+  </div>
+
+  <!-- CLOUD -->
+  <div id="cloud" class="content">
+    <div class="section-title">☁ Cloud & Infrastructure</div>
+    <div class="skills">
+      <div class="skill">Azure Functions</div>
+      <div class="skill">Service Bus</div>
+      <div class="skill">CI/CD</div>
+      <div class="skill">Deployment Automation</div>
+    </div>
+  </div>
+
 </div>
 
-<!-- CORE COMPETENCIES -->
-<section class="observe">
-  <h3 class="section-title">Core Competencies</h3>
-
-  <div class="card">
-    <h4>Technical</h4>
-    <div class="pill">
-      <span>Architecture Design</span>
-      <span>Firmware Development</span>
-      <span>Troubleshooting</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <h4>Managerial</h4>
-    <div class="pill">
-      <span>Project Management</span>
-      <span>Budget & Roadmap</span>
-      <span>Vendor Management</span>
-    </div>
-  </div>
-</section>
-
-<!-- TECHNICAL SKILLS -->
-<section class="observe">
-  <h3 class="section-title">Technical Skills</h3>
-
-  <div class="card">
-    <p><b>Programming:</b> C, C++</p>
-    <p><b>Protocols:</b> SPI, UART, I2C, WiFi, Bluetooth, BLE</p>
-    <p><b>Software Tools:</b> Segger Embedded Studio, Keil, Orcad Cadence, Eclipse, CCS, Arduino, IAR, ImageJ, Python (Basics)</p>
-    <p><b>Hardware Tools:</b> CRO, Current Analyzer, Battery Tester</p>
-    <p><b>MCUs/SoC:</b> MSP430F5529, nRF52832, nRF52840, ATmega328, Epson S1C17V12, Raspberry Pi, NodeMCU, NXP QN9008</p>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section class="observe">
-  <h3 class="section-title">Education</h3>
-
-  <div class="card">
-    <p><b>B.E – Electrical & Electronics Engineering</b><br>JKK College, Erode | Jul 2016</p>
-    <p><b>Diploma – Electrical & Electronics Engineering</b><br>RGP College, Erode | Apr 2012</p>
-    <p><b>Course Work:</b> Speed calculation using rotary encoder with Arduino and UART data display</p>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="observe" id="experience">
-  <h3 class="section-title">Professional Experience</h3>
-
-  <div class="card">
-    <h4>Assistant Manager – Titan Company Limited | 2020 – Present</h4>
-    <ul>
-      <li>End-to-end product development from concept to mass production</li>
-      <li>Prototype design and validation</li>
-      <li>Cross-functional leadership with design, vendor & marketing teams</li>
-      <li>PRDs, roadmaps, budgeting, vendor negotiation</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h4>Technical Executive – Titan Company Limited | 2016 – 2020</h4>
-    <ul>
-      <li>Embedded hardware & firmware for BLE, Bluetooth & IoT</li>
-      <li>PCB fabrication, assembly, testing & troubleshooting</li>
-      <li>ADC programming and MCU synchronization</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h4>Engineer – Aqua Sub Engineering | 2012 – 2013</h4>
-    <ul>
-      <li>Preventive & breakdown maintenance</li>
-      <li>AC/DC motor control & PLC panel wiring</li>
-    </ul>
-  </div>
-</section>
-
-<!-- PATENTS -->
-<section class="observe" id="patents">
-  <h3 class="section-title">Awards & Patents</h3>
-
-  <div class="card">
-    <ul>
-      <li>4 patents completed & 4 under process</li>
-      <li>UNLIKE Award – Piloted Technologies</li>
-      <li>Dream Team Nominee – 2018</li>
-      <li>Lens Bluecoat Detection – 201741026357</li>
-      <li>Photochromic Detection – 201741026394</li>
-      <li>UV Coating Detection – 201741026353</li>
-      <li>Scratch Detection System – 201941017809</li>
-      <li>IoT Monitoring, NFC Watch, MG defect detection – Patent Filed</li>
-    </ul>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<footer id="contact">
-  <p><b>ARUMUGARAJ</b></p>
-  <p>📧 raj.rgpc9@gmail.com | 📞 +91 9880741188</p>
-  <p>
-    🔗 <a href="https://linkedin.com/in/arumugaraj-cts-712515211" target="_blank">
-      LinkedIn Profile
-    </a>
-  </p>
-</footer>
-
 <script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => e.isIntersecting && e.target.classList.add("show"));
-  }, { threshold: 0.15 });
+  function switchTab(id) {
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    document.querySelectorAll(".content").forEach(c => c.classList.remove("active"));
 
-  document.querySelectorAll(".observe")
-    .forEach(el => observer.observe(el));
+    event.target.classList.add("active");
+    document.getElementById(id).classList.add("active");
+  }
 </script>
 
 </body>
