@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Arumugaraj | Manager – Technical</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     :root {
@@ -24,18 +24,17 @@
       font-family: Inter, system-ui, Arial, sans-serif;
       background: var(--page);
       color: var(--text);
+      line-height: 1.7;
     }
 
-    /* NAV */
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 18px 48px;
+      background: rgba(2,6,23,0.9);
       position: sticky;
       top: 0;
-      background: rgba(2,6,23,0.9);
-      backdrop-filter: blur(8px);
       z-index: 100;
     }
     nav strong { color: var(--accent); }
@@ -46,43 +45,26 @@
       font-weight: 500;
     }
 
-    /* HERO */
     .hero {
       max-width: 900px;
       margin: auto;
-      padding: 150px 40px 110px;
+      padding: 140px 40px 100px;
       text-align: center;
       opacity: 0;
       transform: translateY(40px);
       transition: 0.8s ease;
     }
-    .hero.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .hero.show { opacity: 1; transform: translateY(0); }
 
-    .hero h1 {
-      font-size: 56px;
-      margin-bottom: 8px;
-    }
+    .hero h1 { font-size: 56px; margin-bottom: 8px; }
+    .hero h2 { color: var(--accent); font-weight: 500; }
 
-    .hero h2 {
-      color: var(--accent);
-      font-weight: 500;
-      margin-top: 12px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.7;
-      margin-top: 22px;
-    }
+    .hero p { color: var(--muted); margin-top: 20px; }
 
     .btn {
       display: inline-block;
       margin: 26px 12px 0 0;
-      padding: 14px 32px;
+      padding: 14px 30px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
@@ -90,9 +72,7 @@
       background: var(--btn);
     }
     .btn.secondary { background: #1e293b; }
-    .btn.green { background: var(--green); }
 
-    /* SECTIONS */
     section {
       max-width: 1100px;
       margin: auto;
@@ -101,10 +81,7 @@
       transform: translateY(40px);
       transition: 0.8s ease;
     }
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    section.show { opacity: 1; transform: translateY(0); }
 
     h3.section-title {
       font-size: 28px;
@@ -113,24 +90,22 @@
       padding-left: 14px;
     }
 
-    /* STATS */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
-      gap: 24px;
-    }
-    .stat {
+    .card {
       background: var(--card);
       padding: 28px;
       border-radius: 18px;
-      text-align: center;
+      margin-bottom: 20px;
     }
-    .stat h1 {
-      color: var(--accent);
-      font-size: 36px;
-      margin: 0;
+
+    .pill span {
+      display: inline-block;
+      background: #1e293b;
+      color: #cbd5f5;
+      padding: 8px 14px;
+      margin: 6px;
+      border-radius: 999px;
+      font-size: 13px;
     }
-    .stat p { color: var(--muted); }
 
     footer {
       text-align: center;
@@ -147,41 +122,133 @@
   <strong>AR Avatar</strong>
   <div>
     <a href="#home">Home</a>
-    <a href="projects.html">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#patents">Patents</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero observe" id="home">
-  <h1>Arumugaraj</h1>
+  <h1>ARUMUGARAJ</h1>
   <h2>Manager – Technical | Embedded Systems | IoT</h2>
 
   <p>
-    Currently working as <b>Manager – Technical</b> at Titan Company Limited,
-    leading embedded, firmware, and IoT product development from concept to
-    mass production with strong focus on innovation and patented technologies.
+    Experienced in embedded product development with strong analytical skills and
+    deep knowledge of physics, electronics, and system design.
+    Adept at root-cause analysis, problem-solving, and delivering production-ready solutions.
   </p>
 
-  <a class="btn" href="projects.html">View Projects</a>
+  <a class="btn" href="#experience">View Experience</a>
   <a class="btn secondary" href="mailto:raj.rgpc9@gmail.com">Email</a>
-  <a class="btn green" href="Arumugaraj-Resume.pdf" download>Download Resume</a>
 </div>
 
-<!-- STATS -->
+<!-- CORE COMPETENCIES -->
 <section class="observe">
-  <h3 class="section-title">Quantifiable Impact</h3>
-  <div class="stats">
-    <div class="stat"><h1>95%</h1><p>Forecast Accuracy</p></div>
-    <div class="stat"><h1>70%</h1><p>Manual Effort Reduction</p></div>
-    <div class="stat"><h1>90%</h1><p>Search Time Reduction</p></div>
-    <div class="stat"><h1>40%</h1><p>Downtime Reduction</p></div>
-    <div class="stat"><h1>100%</h1><p>Auto-Document Generation</p></div>
+  <h3 class="section-title">Core Competencies</h3>
+
+  <div class="card">
+    <h4>Technical</h4>
+    <div class="pill">
+      <span>Architecture Design</span>
+      <span>Firmware Development</span>
+      <span>Troubleshooting</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h4>Managerial</h4>
+    <div class="pill">
+      <span>Project Management</span>
+      <span>Budget & Roadmap</span>
+      <span>Vendor Management</span>
+    </div>
   </div>
 </section>
 
+<!-- TECHNICAL SKILLS -->
+<section class="observe">
+  <h3 class="section-title">Technical Skills</h3>
+
+  <div class="card">
+    <p><b>Programming:</b> C, C++</p>
+    <p><b>Protocols:</b> SPI, UART, I2C, WiFi, Bluetooth, BLE</p>
+    <p><b>Software Tools:</b> Segger Embedded Studio, Keil, Orcad Cadence, Eclipse, CCS, Arduino, IAR, ImageJ, Python (Basics)</p>
+    <p><b>Hardware Tools:</b> CRO, Current Analyzer, Battery Tester</p>
+    <p><b>MCUs/SoC:</b> MSP430F5529, nRF52832, nRF52840, ATmega328, Epson S1C17V12, Raspberry Pi, NodeMCU, NXP QN9008</p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="observe">
+  <h3 class="section-title">Education</h3>
+
+  <div class="card">
+    <p><b>B.E – Electrical & Electronics Engineering</b><br>JKK College, Erode | Jul 2016</p>
+    <p><b>Diploma – Electrical & Electronics Engineering</b><br>RGP College, Erode | Apr 2012</p>
+    <p><b>Course Work:</b> Speed calculation using rotary encoder with Arduino and UART data display</p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="observe" id="experience">
+  <h3 class="section-title">Professional Experience</h3>
+
+  <div class="card">
+    <h4>Assistant Manager – Titan Company Limited | 2020 – Present</h4>
+    <ul>
+      <li>End-to-end product development from concept to mass production</li>
+      <li>Prototype design and validation</li>
+      <li>Cross-functional leadership with design, vendor & marketing teams</li>
+      <li>PRDs, roadmaps, budgeting, vendor negotiation</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h4>Technical Executive – Titan Company Limited | 2016 – 2020</h4>
+    <ul>
+      <li>Embedded hardware & firmware for BLE, Bluetooth & IoT</li>
+      <li>PCB fabrication, assembly, testing & troubleshooting</li>
+      <li>ADC programming and MCU synchronization</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h4>Engineer – Aqua Sub Engineering | 2012 – 2013</h4>
+    <ul>
+      <li>Preventive & breakdown maintenance</li>
+      <li>AC/DC motor control & PLC panel wiring</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PATENTS -->
+<section class="observe" id="patents">
+  <h3 class="section-title">Awards & Patents</h3>
+
+  <div class="card">
+    <ul>
+      <li>4 patents completed & 4 under process</li>
+      <li>UNLIKE Award – Piloted Technologies</li>
+      <li>Dream Team Nominee – 2018</li>
+      <li>Lens Bluecoat Detection – 201741026357</li>
+      <li>Photochromic Detection – 201741026394</li>
+      <li>UV Coating Detection – 201741026353</li>
+      <li>Scratch Detection System – 201941017809</li>
+      <li>IoT Monitoring, NFC Watch, MG defect detection – Patent Filed</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <footer id="contact">
-  © 2025 Arumugaraj · Portfolio
+  <p><b>ARUMUGARAJ</b></p>
+  <p>📧 raj.rgpc9@gmail.com | 📞 +91 9880741188</p>
+  <p>
+    🔗 <a href="https://linkedin.com/in/arumugaraj-cts-712515211" target="_blank">
+      LinkedIn Profile
+    </a>
+  </p>
 </footer>
 
 <script>
