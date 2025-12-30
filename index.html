@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Arumugaraj | Manager – Technical</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     html { scroll-behavior: smooth; }
     * { box-sizing: border-box; }
 
+    :root {
+      --blue: #2563eb;
+      --blue-light: #eff6ff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e5e7eb;
+    }
+
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: #0b1120;
-      color: #e5e7eb;
-      line-height: 1.6;
+      background: #ffffff;
+      color: var(--text);
+      line-height: 1.55;
     }
 
     /* NAV */
@@ -22,149 +30,191 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 40px;
-      background: #020617;
+      padding: 10px 40px;        /* reduced */
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 10;
     }
-    nav h2 { color: #38bdf8; margin: 0; }
+
+    nav h2 {
+      margin: 0;
+      color: var(--blue);
+      font-size: 18px;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
-      gap: 25px;
+      gap: 22px;                /* reduced */
       margin: 0;
       padding: 0;
     }
+
     nav a {
-      color: #cbd5f5;
+      color: var(--muted);
       text-decoration: none;
       font-weight: 500;
     }
 
-    /* LAYOUT */
+    /* SECTIONS */
     header, section {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: auto;
-      padding: 70px 40px;
+      padding: 45px 40px;       /* reduced */
       opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
     }
+
     header.show, section.show {
       opacity: 1;
       transform: translateY(0);
     }
 
-    header h1 { font-size: 46px; }
-    header h3 { color: #38bdf8; }
+    /* HERO */
+    header h1 {
+      font-size: 38px;          /* reduced */
+      margin-bottom: 6px;
+    }
+
+    header h3 {
+      color: var(--blue);
+      font-size: 18px;
+      margin-top: 4px;
+    }
+
+    header p {
+      max-width: 700px;
+      color: var(--muted);
+      margin: 14px 0 10px;      /* reduced */
+    }
 
     /* BUTTONS */
     .btn {
       display: inline-block;
-      padding: 12px 26px;
-      margin: 12px 10px 0 0;
+      padding: 10px 22px;       /* reduced */
+      margin: 8px 8px 0 0;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 14px;
       color: white;
+      background: var(--blue);
     }
-    .btn-email { background: #2563eb; }
-    .btn-linkedin { background: #0a66c2; }
-    .btn-resume { background: #16a34a; }
 
+    .btn-outline {
+      background: white;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+    }
+
+    /* HEADINGS */
     h2 {
-      border-bottom: 2px solid #2563eb;
+      color: var(--blue);
+      border-bottom: 2px solid var(--blue);
       display: inline-block;
-      padding-bottom: 6px;
-      margin-bottom: 25px;
+      padding-bottom: 4px;
+      margin-bottom: 18px;      /* reduced */
+      font-size: 22px;
     }
 
+    /* BOX */
     .box {
-      background: #020617;
-      padding: 25px;
+      background: #ffffff;
+      padding: 20px;            /* reduced */
       border-radius: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 14px;      /* reduced */
+      border: 1px solid var(--border);
     }
 
-    /* ================= CORE COMPETENCIES ================= */
+    ul {
+      margin: 6px 0 0;
+      padding-left: 18px;
+    }
 
+    li {
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+
+    /* CORE COMPETENCIES */
     .core-title {
       text-align: center;
-      font-size: 32px;
-      color: #38bdf8;
-      margin-bottom: 40px;
+      font-size: 26px;          /* reduced */
+      color: var(--blue);
+      margin-bottom: 24px;      /* reduced */
     }
 
     .core-tabs {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      margin-bottom: 40px;
+      gap: 8px;                 /* reduced */
+      margin-bottom: 24px;      /* reduced */
       flex-wrap: wrap;
     }
 
     .core-tab {
-      background: #020617;
-      border: 1px solid #1e293b;
-      padding: 14px 28px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 10px 22px;       /* reduced */
       border-radius: 999px;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       cursor: pointer;
-      color: #cbd5f5;
-      transition: 0.3s ease;
+      color: var(--muted);
     }
 
     .core-tab.active {
-      background: #2563eb;
+      background: var(--blue);
       color: white;
-      box-shadow: 0 6px 20px rgba(37,99,235,0.5);
-      border-color: #2563eb;
+      border-color: var(--blue);
+      box-shadow: 0 4px 14px rgba(37,99,235,0.3);
     }
 
     .core-content {
       display: none;
-      max-width: 1000px;
+      max-width: 950px;
       margin: auto;
-      animation: fadeCore 0.4s ease;
+      animation: fadeCore 0.3s ease;
     }
 
     .core-content.active { display: block; }
 
     .core-subtitle {
-      font-size: 22px;
-      color: #38bdf8;
-      margin-bottom: 20px;
+      font-size: 18px;
+      color: var(--blue);
+      margin-bottom: 14px;
     }
 
     .core-skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 10px;                /* reduced */
     }
 
     .core-skills span {
-      background: #020617;
-      border: 1px solid #1e293b;
-      padding: 12px 22px;
+      background: var(--blue-light);
+      border: 1px solid #dbeafe;
+      padding: 8px 16px;        /* reduced */
       border-radius: 999px;
-      font-size: 14px;
-      color: #e5e7eb;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-    }
-
-    @keyframes fadeCore {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+      font-size: 13px;
+      color: #1e40af;
+      font-weight: 500;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      background: #020617;
-      color: #94a3b8;
-      font-size: 14px;
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @keyframes fadeCore {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -173,7 +223,7 @@
 
 <!-- NAV -->
 <nav>
-  <h2>AR Avatar</h2>
+  <h2>ARUMUGARAJ</h2>
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#competencies">Competencies</a></li>
@@ -188,17 +238,14 @@
   <h1>ARUMUGARAJ</h1>
   <h3>Manager – Technical | Embedded Systems | IoT | Firmware</h3>
   <p>
-    Manager – Technical at Titan Company Limited with strong expertise in
-    embedded systems, firmware, IoT, and product lifecycle management.
+    Manager – Technical at Titan Company Limited with expertise in embedded systems,
+    firmware, IoT, and end-to-end product lifecycle management.
   </p>
 
-  <a class="btn btn-email" href="mailto:raj.rgpc9@gmail.com">Email Me</a>
-  <a class="btn btn-linkedin"
+  <a class="btn" href="mailto:raj.rgpc9@gmail.com">Email</a>
+  <a class="btn btn-outline"
      href="https://linkedin.com/in/arumugaraj-cts-712515211"
      target="_blank">LinkedIn</a>
-  <a class="btn btn-resume" href="Arumugaraj-Resume.pdf" download>
-    Download Resume
-  </a>
 </header>
 
 <!-- CORE COMPETENCIES -->
@@ -207,12 +254,12 @@
 
   <div class="core-tabs">
     <button class="core-tab active" onclick="switchCoreTab('tech', this)">Technical Stack</button>
-    <button class="core-tab" onclick="switchCoreTab('ai', this)">AI/ML & Cognitive</button>
-    <button class="core-tab" onclick="switchCoreTab('cloud', this)">Cloud & Infrastructure</button>
+    <button class="core-tab" onclick="switchCoreTab('ai', this)">AI / ML</button>
+    <button class="core-tab" onclick="switchCoreTab('cloud', this)">Cloud</button>
   </div>
 
   <div id="tech" class="core-content active">
-    <h3 class="core-subtitle">&lt;/&gt; Technical Stack</h3>
+    <h3 class="core-subtitle">Technical Stack</h3>
     <div class="core-skills">
       <span>C</span><span>C++</span><span>SPI</span><span>UART</span><span>I2C</span>
       <span>Bluetooth</span><span>BLE</span><span>WiFi</span>
@@ -233,7 +280,7 @@
     <h3 class="core-subtitle">Cloud & Infrastructure</h3>
     <div class="core-skills">
       <span>Azure</span>
-      <span>CI/CD</span>
+      <span>CI / CD</span>
       <span>Deployment Automation</span>
     </div>
   </div>
@@ -248,7 +295,7 @@
     <ul>
       <li>Leading embedded & IoT product development</li>
       <li>Architecture design and firmware ownership</li>
-      <li>Vendor & cross-functional team leadership</li>
+      <li>Vendor & cross-functional leadership</li>
     </ul>
   </div>
 </section>
@@ -278,13 +325,11 @@
 
 <script>
   const sections = document.querySelectorAll("header, section");
-
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add("show");
     });
   }, { threshold: 0.1 });
-
   sections.forEach(section => observer.observe(section));
 
   function switchCoreTab(id, btn) {
