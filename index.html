@@ -1,21 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Arumuga Raj | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       background: #0f172a;
-      color: white;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 80px 20px;
       text-align: center;
     }
-    .container {
-      padding: 100px 20px;
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
     }
-    h1 { font-size: 48px; }
-    p { font-size: 20px; color: #94a3b8; }
-    a {
+    header p {
+      font-size: 20px;
+      color: #94a3b8;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #2563eb;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    .skills span {
+      display: inline-block;
+      background: #1e293b;
+      padding: 10px 15px;
+      margin: 6px;
+      border-radius: 6px;
+    }
+    .project {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    a.button {
       display: inline-block;
       margin-top: 20px;
       padding: 12px 24px;
@@ -24,13 +56,65 @@
       text-decoration: none;
       border-radius: 6px;
     }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+    }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Arumuga Raj</h1>
-    <p>Portfolio Website</p>
-    <a href="mailto:yourgmail@gmail.com">Contact Me</a>
+
+<header>
+  <h1>Arumuga Raj</h1>
+  <p>Embedded | IoT | Software Developer</p>
+  <a class="button" href="mailto:yourgmail@gmail.com">Contact Me</a>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am a passionate developer working on embedded systems, IoT,
+    and software projects. I enjoy building real-world solutions
+    and continuously learning new technologies.
+  </p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>C</span>
+    <span>C++</span>
+    <span>Embedded Systems</span>
+    <span>IoT</span>
+    <span>Python</span>
+    <span>Git</span>
   </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="project">
+    <h3>BLE Based Device</h3>
+    <p>Developed BLE firmware using nRF and Segger Embedded Studio.</p>
+  </div>
+  <div class="project">
+    <h3>IoT Monitoring System</h3>
+    <p>Sensor data monitoring with cloud integration.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: <strong>yourgmail@gmail.com</strong></p>
+  <a class="button" href="mailto:yourgmail@gmail.com">Send Email</a>
+</section>
+
+<footer>
+  © 2025 Arumuga Raj | Portfolio
+</footer>
+
 </body>
 </html>
