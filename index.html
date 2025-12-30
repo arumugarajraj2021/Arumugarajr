@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Arumugaraj | Portfolio</title>
+  <title>Arumugaraj | Embedded & IoT Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -15,6 +15,7 @@
       line-height: 1.6;
     }
 
+    /* NAVBAR */
     nav {
       display: flex;
       justify-content: space-between;
@@ -24,7 +25,10 @@
       position: sticky;
       top: 0;
     }
-    nav h2 { color: #38bdf8; margin: 0; }
+    nav h2 {
+      color: #38bdf8;
+      margin: 0;
+    }
     nav ul {
       list-style: none;
       display: flex;
@@ -32,28 +36,43 @@
       margin: 0;
       padding: 0;
     }
-    nav a { color: #cbd5f5; text-decoration: none; }
+    nav a {
+      text-decoration: none;
+      color: #cbd5f5;
+      font-weight: 500;
+    }
 
+    /* HERO */
     header {
       padding: 90px 40px;
       max-width: 1200px;
       margin: auto;
     }
-    header h1 { font-size: 46px; }
-    header h3 { color: #38bdf8; font-weight: 500; }
-    header p { max-width: 900px; color: #94a3b8; }
+    header h1 {
+      font-size: 46px;
+      margin-bottom: 5px;
+    }
+    header h3 {
+      color: #38bdf8;
+      font-weight: 500;
+    }
+    header p {
+      max-width: 950px;
+      color: #94a3b8;
+      margin-top: 20px;
+    }
 
     .btn {
       display: inline-block;
       padding: 12px 26px;
-      margin: 10px 10px 0 0;
+      margin: 12px 10px 0 0;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      color: #fff;
+      color: white;
     }
-    .btn-primary { background: #2563eb; }
-    .btn-secondary { background: #1e293b; }
+    .btn-email { background: #2563eb; }
+    .btn-linkedin { background: #0a66c2; }
     .btn-resume { background: #16a34a; }
 
     section {
@@ -61,11 +80,19 @@
       margin: auto;
       padding: 60px 40px;
     }
+
     h2 {
       border-bottom: 2px solid #2563eb;
       display: inline-block;
       padding-bottom: 6px;
       margin-bottom: 25px;
+    }
+
+    .box {
+      background: #020617;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
     .skills span {
@@ -75,13 +102,6 @@
       margin: 6px;
       border-radius: 6px;
       font-size: 14px;
-    }
-
-    .box {
-      background: #020617;
-      padding: 25px;
-      border-radius: 10px;
-      margin-bottom: 20px;
     }
 
     footer {
@@ -100,32 +120,68 @@
 <nav>
   <h2>AR Avatar</h2>
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Experience</a></li>
-    <li><a href="#">Projects</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
-<header>
+<header id="home">
   <h1>ARUMUGARAJ</h1>
   <h3>Embedded Systems | IoT | Firmware Engineer</h3>
 
   <p>
     Experienced embedded product development professional with strong analytical
-    skills and deep knowledge of electronics, firmware, and system design.
-    Adept at root-cause analysis, troubleshooting, and delivering reliable,
-    production-ready solutions.
+    skills and deep expertise in electronics, firmware, and system design.
+    Proven ability to deliver production-ready solutions through effective
+    troubleshooting, cross-functional collaboration, and innovation.
   </p>
 
-  <a class="btn btn-primary" href="mailto:raj.rgpc9@gmail.com">Contact Me</a>
-  <a class="btn btn-secondary" href="https://linkedin.com/in/arumugaraj-cts-712515211" target="_blank">LinkedIn</a>
-  <a class="btn btn-resume" href="Arumugaraj-Resume.pdf" download>Download Resume</a>
+  <a class="btn btn-email" href="mailto:raj.rgpc9@gmail.com">Email Me</a>
+  <a class="btn btn-linkedin"
+     href="https://linkedin.com/in/arumugaraj-cts-712515211"
+     target="_blank">LinkedIn</a>
+  <a class="btn btn-resume"
+     href="Arumugaraj-Resume.pdf"
+     download>Download Resume</a>
 </header>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Professional Experience</h2>
+
+  <div class="box">
+    <h3>Assistant Manager – Titan Company Limited (2020 – Present)</h3>
+    <ul>
+      <li>Managed product development from concept to mass production</li>
+      <li>Designed and validated prototypes to prove concepts</li>
+      <li>Led cross-functional teams across design, vendors & marketing</li>
+      <li>Handled PRDs, roadmaps, budgeting, and vendor negotiations</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h3>Technical Executive – Titan Company Limited (2016 – 2020)</h3>
+    <ul>
+      <li>Embedded firmware development for BLE, Bluetooth & IoT products</li>
+      <li>PCB fabrication, assembly, testing & troubleshooting</li>
+      <li>ADC programming and MCU synchronization</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h3>Engineer – Aqua Sub Engineering (2012 – 2013)</h3>
+    <ul>
+      <li>Preventive & breakdown maintenance</li>
+      <li>Electrical control panels, PLC wiring & motor control</li>
+    </ul>
+  </div>
+</section>
+
 <!-- SKILLS -->
-<section>
+<section id="skills">
   <h2>Technical Skills</h2>
   <div class="skills">
     <span>C</span><span>C++</span><span>SPI</span><span>UART</span><span>I2C</span>
@@ -134,39 +190,6 @@
     <span>Arduino</span><span>Python (Basics)</span>
     <span>nRF52832</span><span>nRF52840</span><span>MSP430</span>
     <span>Raspberry Pi</span><span>NodeMCU</span>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section>
-  <h2>Professional Experience</h2>
-
-  <div class="box">
-    <h3>Assistant Manager – Titan Company Limited (2020 – Present)</h3>
-    <ul>
-      <li>Managed product development from concept to mass production</li>
-      <li>Designed and developed prototypes to validate concepts</li>
-      <li>Led cross-functional teams across design, vendors, and marketing</li>
-      <li>Handled PRDs, roadmaps, budgeting, and vendor negotiations</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h3>Technical Executive – Titan Company Limited (2016 – 2020)</h3>
-    <ul>
-      <li>Worked on BLE, Bluetooth, and IoT product architectures</li>
-      <li>Embedded firmware development and hardware integration</li>
-      <li>PCB fabrication, assembly, testing, and troubleshooting</li>
-      <li>ADC programming and MCU synchronization</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h3>Engineer – Aqua Sub Engineering (2012 – 2013)</h3>
-    <ul>
-      <li>Preventive and breakdown maintenance</li>
-      <li>Electrical panels, PLC wiring, motor control systems</li>
-    </ul>
   </div>
 </section>
 
@@ -193,10 +216,15 @@
 </section>
 
 <!-- CONTACT -->
-<section>
+<section id="contact">
   <h2>Contact</h2>
   <p>Email: <strong>raj.rgpc9@gmail.com</strong></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/arumugaraj-cts-712515211" target="_blank">View Profile</a></p>
+  <p>
+    LinkedIn:
+    <a href="https://linkedin.com/in/arumugaraj-cts-712515211" target="_blank">
+      View Profile
+    </a>
+  </p>
 </section>
 
 <footer>
