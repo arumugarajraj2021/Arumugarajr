@@ -6,37 +6,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    :root {
+      --bg: #0b1120;
+      --nav: #020617;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #0b1120;
-      color: #e5e7eb;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
     nav {
-      padding: 16px 40px;
-      background: #020617;
+      padding: 18px 48px;
+      background: rgba(2,6,23,0.9);
+      backdrop-filter: blur(8px);
     }
     nav a {
-      color: #38bdf8;
+      color: var(--accent);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
 
-    section {
-      max-width: 1100px;
+    .page {
+      max-width: 1150px;
       margin: auto;
-      padding: 70px 40px;
+      padding: 90px 40px;
     }
 
-    .project {
-      background: #020617;
-      padding: 25px;
-      border-radius: 10px;
-      margin-bottom: 20px;
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
     }
 
-    h1 { color: #38bdf8; }
+    p.subtitle {
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 26px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 28px;
+      border-radius: 18px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(56,189,248,0.18), transparent);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(56,189,248,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 20px;
+      position: relative;
+    }
+
+    .card h3::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.35s ease;
+    }
+
+    .card:hover h3::after {
+      width: 100%;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    .tags {
+      margin-top: 18px;
+    }
+    .tag {
+      display: inline-block;
+      background: #1e293b;
+      color: #cbd5f5;
+      padding: 6px 12px;
+      margin: 6px 6px 0 0;
+      border-radius: 999px;
+      font-size: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+      background: var(--nav);
+      margin-top: 80px;
+    }
   </style>
 </head>
 
@@ -46,41 +153,52 @@
   <a href="index.html">← Back to Home</a>
 </nav>
 
-<section>
+<div class="page">
   <h1>Projects</h1>
+  <p class="subtitle">
+    Embedded systems, IoT, firmware, and patented innovation projects
+    delivered from concept to production.
+  </p>
 
-  <div class="project">
-    <h3>BLE & IoT Wearable Devices</h3>
-    <p>
-      Designed and developed embedded firmware using BLE and IoT technologies,
-      including PCB integration, testing, and production deployment.
-    </p>
-  </div>
+  <div class="grid">
 
-  <div class="project">
-    <h3>Lens Analyzer Systems</h3>
-    <p>
-      Developed optical lens inspection systems for coating detection,
-      scratch analysis, and UV property validation.
-    </p>
-  </div>
+    <div class="card">
+      <div class="icon">🔵</div>
+      <h3>BLE & IoT Wearable Devices</h3>
+      <p>BLE firmware, production deployment, and wearable integration.</p>
+      <div class="tags">
+        <span class="tag">BLE</span>
+        <span class="tag">nRF52840</span>
+        <span class="tag">Embedded C</span>
+      </div>
+    </div>
 
-  <div class="project">
-    <h3>NFC Watch & Energy Harvesting</h3>
-    <p>
-      Implemented NFC-based auto time correction with energy harvesting
-      mechanisms for low-power wearable devices.
-    </p>
-  </div>
+    <div class="card">
+      <div class="icon">👓</div>
+      <h3>Lens Analyzer Systems</h3>
+      <p>Optical lens inspection systems with patented algorithms.</p>
+      <div class="tags">
+        <span class="tag">Optics</span>
+        <span class="tag">Patents</span>
+        <span class="tag">Image Analysis</span>
+      </div>
+    </div>
 
-  <div class="project">
-    <h3>IoT Monitoring & Image Comparison</h3>
-    <p>
-      Designed IoT devices for real-time monitoring and image comparison
-      with cloud connectivity.
-    </p>
-  </div>
-</section>
+    <div class="card">
+      <div class="icon">📡</div>
+      <h3>IoT Monitoring & Image Comparison</h3>
+      <p>Real-time IoT monitoring with cloud analytics.</p>
+      <div class="tags">
+        <span class="tag">IoT</span>
+        <span class="tag">Cloud</span>
+        <span class="tag">Automation</span>
+      </div>
+    </div>
 
-</body>
-</html>
+    <div class="card">
+      <div class="icon">⌚</div>
+      <h3>NFC Watch & Energy Harvesting</h3>
+      <p>NFC-based auto time correction for low-power wearables.</p>
+      <div class="tags">
+        <span class="tag">NFC</span>
+        <span clas
