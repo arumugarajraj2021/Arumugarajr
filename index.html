@@ -1,151 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Arumugaraj | Embedded & AI Engineer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Arumugaraj | Embedded Product Development</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- ICONS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
 
-<style>
-:root{
-  --blue:#2563eb;
-  --light:#eff6ff;
-  --text:#0f172a;
-  --muted:#475569;
-  --border:#e5e7eb;
-}
-html{scroll-behavior:smooth}
-body{
-  margin:0;font-family:Segoe UI,Arial,sans-serif;
-  background:#fff;color:var(--text);line-height:1.55
-}
-nav{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:10px 40px;border-bottom:1px solid var(--border)
-}
-nav h2{color:var(--blue);margin:0}
-nav a{margin-left:22px;text-decoration:none;color:var(--muted);font-weight:500}
+    :root {
+      --blue: #2563eb;
+      --blue-light: #eff6ff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e5e7eb;
+    }
 
-section,header{
-  max-width:1100px;margin:auto;padding:42px 40px
-}
-h1{font-size:36px;margin-bottom:6px}
-h3{color:var(--blue);margin-top:4px}
-p{color:var(--muted)}
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #ffffff;
+      color: var(--text);
+      line-height: 1.55;
+    }
 
-.btn{
-  display:inline-block;padding:9px 20px;margin-top:10px;
-  background:var(--blue);color:#fff;text-decoration:none;
-  border-radius:6px;font-weight:600;font-size:14px
-}
-.btn-outline{
-  background:#fff;color:var(--blue);border:1px solid var(--blue)
-}
-h2{
-  color:var(--blue);border-bottom:2px solid var(--blue);
-  display:inline-block;padding-bottom:4px;margin-bottom:16px
-}
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-/* CORE COMPETENCIES */
-.tabs{display:flex;gap:8px;justify-content:center;margin-bottom:20px}
-.tab{
-  padding:8px 18px;border-radius:999px;border:1px solid var(--border);
-  cursor:pointer;background:#fff;font-weight:600;color:var(--muted)
-}
-.tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+    nav h2 {
+      margin: 0;
+      color: var(--blue);
+      font-size: 18px;
+    }
 
-.skills{display:flex;flex-wrap:wrap;gap:8px}
-.skills span{
-  background:var(--light);border:1px solid #dbeafe;
-  padding:7px 14px;border-radius:999px;
-  font-size:13px;color:#1e40af
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+    }
 
-footer{
-  border-top:1px solid var(--border);
-  text-align:center;padding:18px;color:var(--muted);font-size:13px
-}
-</style>
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* SECTIONS */
+    header, section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 40px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s ease;
+    }
+
+    header.show, section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* HERO */
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 4px;
+    }
+
+    header h3 {
+      color: var(--blue);
+      font-size: 17px;
+      margin-top: 4px;
+    }
+
+    header p {
+      max-width: 760px;
+      color: var(--muted);
+      margin: 12px 0 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 9px 20px;
+      margin: 8px 8px 0 0;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      color: white;
+      background: var(--blue);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+    }
+
+    /* HEADINGS */
+    h2 {
+      color: var(--blue);
+      border-bottom: 2px solid var(--blue);
+      display: inline-block;
+      padding-bottom: 4px;
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+
+    /* BOX */
+    .box {
+      background: #ffffff;
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+    }
+
+    ul {
+      margin: 6px 0 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+
+    /* CORE COMPETENCIES */
+    .core-title {
+      text-align: center;
+      font-size: 24px;
+      color: var(--blue);
+      margin-bottom: 18px;
+    }
+
+    .core-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .core-tab {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--muted);
+    }
+
+    .core-tab.active {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+      box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+    }
+
+    .core-content {
+      display: none;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .core-content.active { display: block; }
+
+    .core-subtitle {
+      font-size: 17px;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .core-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .core-skills span {
+      background: var(--blue-light);
+      border: 1px solid #dbeafe;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: #1e40af;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <h2>ARUMUGARAJ</h2>
-  <div>
-    <a href="#skills">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#competencies">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<header>
+<!-- HERO -->
+<header id="home">
   <h1>ARUMUGARAJ</h1>
-  <h3>Embedded Product Development | AI/ML | Smart Wearables</h3>
+  <h3>
+    Embedded Product Development | Qualcomm QCC5171 & AR1 | Smart Wearables & Eyewear
+  </h3>
   <p>
-    Embedded product development professional with expertise in Qualcomm QCC5171,
-    AR1 platforms, AI/ML integration, and production-scale systems.
+    Embedded product development professional with strong expertise in electronics,
+    physics, and system design. Proven experience delivering smart wearables,
+    eyewear devices, and retail systems from concept to mass production.
   </p>
-  <a class="btn" href="projects.html">View Projects</a>
-  <a class="btn btn-outline" href="mailto:raj.rgpc9@gmail.com">Email</a>
+
+  <a class="btn" href="mailto:raj.rgpc9@gmail.com">Email</a>
+  <a class="btn btn-outline"
+     href="https://linkedin.com/in/arumugaraj07"
+     target="_blank">LinkedIn</a>
+  <a class="btn" href="ArumugarajResume1.pdf" download>Resume</a>
 </header>
 
-<section id="skills">
-  <h2>Core Competencies</h2>
+<!-- CORE COMPETENCIES -->
+<section id="competencies">
+  <h2 class="core-title">Core Competencies</h2>
 
-  <div class="tabs">
-    <div class="tab active" onclick="showTab('embedded',this)">Embedded</div>
-    <div class="tab" onclick="showTab('aiml',this)">AI / ML</div>
-    <div class="tab" onclick="showTab('cloud',this)">Cloud</div>
+  <div class="core-tabs">
+    <button class="core-tab active" onclick="switchCoreTab('tech', this)">Embedded & Firmware</button>
+    <button class="core-tab" onclick="switchCoreTab('hw', this)">Hardware & Electronics</button>
   </div>
 
-  <div id="embedded" class="content">
-    <div class="skills">
-      <span><i class="fa-solid fa-microchip"></i> Embedded C/C++</span>
+  <div id="tech" class="core-content active">
+    <h3 class="core-subtitle">Embedded & Firmware</h3>
+    <div class="core-skills">
+      <span>Embedded C / C++</span>
+      <span>ARM Cortex-M</span>
       <span>nRF52840</span>
-      <span>QCC5171</span>
-      <span>AR1</span>
-      <span>BLE / Bluetooth</span>
-      <span>SEGGER</span>
+      <span>Qualcomm QCC5171</span>
+      <span>Qualcomm AR1</span>
+      <span>RTOS (Basics)</span>
+      <span>SEGGER Embedded Studio</span>
+      <span>Arduino</span>
+      <span>Python</span>
+      <span>SQL</span>
     </div>
   </div>
 
-  <div id="aiml" class="content" style="display:none">
-    <div class="skills">
-      <span><i class="fa-solid fa-brain"></i> RAG Architecture</span>
-      <span>OpenAI API</span>
-      <span>Gemini AI</span>
-      <span>Scikit-learn</span>
-      <span>Pandas / NumPy</span>
-      <span>NLP</span>
-    </div>
-  </div>
-
-  <div id="cloud" class="content" style="display:none">
-    <div class="skills">
-      <span><i class="fa-solid fa-cloud"></i> Azure</span>
-      <span>CI/CD</span>
-      <span>Deployment Automation</span>
+  <div id="hw" class="core-content">
+    <h3 class="core-subtitle">Hardware & Electronics</h3>
+    <div class="core-skills">
+      <span>Schematic Design</span>
+      <span>Analog Circuit Analysis</span>
+      <span>Datasheet Analysis</span>
+      <span>Component Selection</span>
+      <span>PCB Layout</span>
+      <span>AFE & Power Selection</span>
+      <span>OrCAD</span>
     </div>
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="box">
+    <strong>Manager – Embedded Product Development</strong><br>
+    Titan Company Limited · Bangalore · Apr 2022 – Present
+    <ul>
+      <li>Led smart wearable and retail device development from concept to mass production</li>
+      <li>Owned full product lifecycle: prototyping, pilot builds, production readiness</li>
+      <li>Built PRDs, product roadmaps, budgets, and vendor negotiations</li>
+      <li>Eyewear development using Qualcomm QCC5171 and AR1 platforms</li>
+      <li>Led digital phoropter hardware and software development</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <strong>Technical Executive</strong><br>
+    Titan Company Limited · Apr 2016 – Mar 2020
+    <ul>
+      <li>Hardware design & development for wearable and IoT products</li>
+      <li>BLE, Bluetooth, and IoT system integration</li>
+      <li>PCB fabrication, assembly, testing, and debugging</li>
+      <li>MCU ADC programming for voltage, current, and temperature sensing</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <strong>Engineer</strong><br>
+    Aqua Sub Engineering · Coimbatore · Apr 2012 – Apr 2013
+    <ul>
+      <li>Preventive and breakdown maintenance</li>
+      <li>AC/DC motor control and PLC panel wiring</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="box">
+    <strong>M.Tech in Data Science & AI (WILP)</strong><br>
+    PES University, Bangalore · Jul 2025
+  </div>
+
+  <div class="box">
+    <strong>B.E in Electrical & Electronics Engineering</strong><br>
+    JKK College, Erode · 2012 – 2016
+  </div>
+
+  <div class="box">
+    <strong>Diploma in Electrical & Electronics Engineering</strong><br>
+    RGP College, Erode · 2010 – 2012
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: <b>raj.rgpc9@gmail.com</b></p>
+  <p>
+    📧 <strong>raj.rgpc9@gmail.com</strong><br>
+    📞 +91 9880741188
+  </p>
 </section>
 
-<footer>© 2026 Arumugaraj</footer>
+<footer>
+  © 2026 Arumugaraj · Portfolio
+</footer>
 
 <script>
-function showTab(id,el){
-  document.querySelectorAll('.content').forEach(c=>c.style.display='none');
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById(id).style.display='block';
-  el.classList.add('active');
-}
+  const sections = document.querySelectorAll("header, section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(section => observer.observe(section));
+
+  function switchCoreTab(id, btn) {
+    document.querySelectorAll(".core-tab").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".core-content").forEach(c => c.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(id).classList.add("active");
+  }
 </script>
 
 </body>
