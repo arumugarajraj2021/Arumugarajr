@@ -9,53 +9,116 @@
 
 <style>
 :root{
-  --blue:#2563eb;--text:#0f172a;--muted:#475569;--border:#e5e7eb
+  --blue:#2563eb;
+  --text:#0f172a;
+  --muted:#475569;
+  --border:#e5e7eb;
 }
+
 body{
-  margin:0;font-family:Segoe UI,Arial,sans-serif;
-  background:#fff;color:var(--text)
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#ffffff;
+  color:var(--text);
+  line-height:1.55;
 }
+
 nav{
-  padding:10px 40px;border-bottom:1px solid var(--border)
+  display:flex;
+  align-items:center;
+  padding:10px 40px;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:10;
 }
-nav a{text-decoration:none;color:var(--blue);font-weight:600}
+
+nav a{
+  text-decoration:none;
+  color:var(--blue);
+  font-weight:600;
+}
 
 section{
-  max-width:1100px;margin:auto;padding:40px
+  max-width:1100px;
+  margin:auto;
+  padding:40px;
 }
-h1{color:var(--blue)}
+
+h1{
+  color:var(--blue);
+  margin-bottom:30px;
+}
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:24px;
 }
+
 .card{
   border:1px solid var(--border);
-  border-radius:12px;
-  padding:20px;
-  transition:.3s;
+  border-radius:14px;
+  padding:22px;
+  transition:0.3s ease;
+  background:#fff;
 }
+
 .card:hover{
   transform:translateY(-6px);
-  box-shadow:0 10px 30px rgba(37,99,235,.2)
+  box-shadow:0 12px 32px rgba(37,99,235,0.2);
 }
-.card h3{margin-top:0;color:var(--blue)}
-.card p{color:var(--muted);font-size:14px}
+
+.card h3{
+  margin-top:0;
+  margin-bottom:10px;
+  color:var(--blue);
+  font-size:18px;
+}
+
+.card p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+.tags{
+  margin-top:12px;
+}
+
+.tag{
+  display:inline-block;
+  background:#eff6ff;
+  color:#2563eb;
+  font-size:12px;
+  padding:4px 10px;
+  border-radius:20px;
+  margin:4px 4px 0 0;
+}
 
 .actions{
-  margin-top:12px
+  margin-top:16px;
 }
+
 .actions a{
   text-decoration:none;
-  padding:7px 14px;
-  border-radius:6px;
   font-size:13px;
   font-weight:600;
-  margin-right:6px;
+  padding:8px 14px;
+  border-radius:6px;
+  margin-right:8px;
+  display:inline-block;
 }
-.github{border:1px solid var(--blue);color:var(--blue)}
-.demo{background:var(--blue);color:#fff}
+
+.github{
+  border:1px solid var(--blue);
+  color:var(--blue);
+}
+
+.demo{
+  background:var(--blue);
+  color:#ffffff;
+}
 </style>
 </head>
 
@@ -70,29 +133,47 @@ h1{color:var(--blue)}
 
 <div class="grid">
 
+  <!-- Smart Eyewear -->
   <div class="card">
-    <h3><i class="fa-solid fa-glasses"></i> Smart Eyewear Platform</h3>
-    <p>Qualcomm QCC5171 & AR1 based smart eyewear with BLE, sensors, and power optimization.</p>
+    <h3><i class="fa-solid fa-glasses"></i> Smart Eyewear Platform (Titan EyeX2)</h3>
+    <p>
+      Developed a smart eyewear platform based on Qualcomm QCC5171 and Snapdragon AR1.
+      Implemented BLE connectivity, sensor integration, and aggressive power optimization
+      for all-day wearable usage.
+    </p>
+
+    <div class="tags">
+      <span class="tag">QCC5171</span>
+      <span class="tag">Snapdragon AR1</span>
+      <span class="tag">BLE</span>
+      <span class="tag">Wearables</span>
+      <span class="tag">Low Power</span>
+    </div>
+
     <div class="actions">
       <a class="github" href="#">GitHub</a>
       <a class="demo" href="#">Demo</a>
     </div>
   </div>
 
+  <!-- Digital Phoropter -->
   <div class="card">
     <h3><i class="fa-solid fa-eye"></i> Digital Phoropter</h3>
-    <p>Optical measurement system with firmware, calibration logic, and retail deployment.</p>
-    <div class="actions">
-      <a class="github" href="#">GitHub</a>
-    </div>
-  </div>
+    <p>
+      Designed and developed a digital phoropter for optical measurement and vision testing.
+      Worked on embedded firmware, calibration algorithms, and system validation for retail
+      deployment.
+    </p>
 
-  <div class="card">
-    <h3><i class="fa-solid fa-brain"></i> AI/ML RAG Applications</h3>
-    <p>RAG pipelines using OpenAI & Gemini with NLP and predictive modeling.</p>
+    <div class="tags">
+      <span class="tag">Embedded Firmware</span>
+      <span class="tag">Calibration</span>
+      <span class="tag">Optical Systems</span>
+      <span class="tag">Medical Devices</span>
+    </div>
+
     <div class="actions">
       <a class="github" href="#">GitHub</a>
-      <a class="demo" href="#">Demo</a>
     </div>
   </div>
 
