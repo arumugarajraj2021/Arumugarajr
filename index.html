@@ -58,6 +58,7 @@
       font-weight: 500;
     }
 
+    /* SECTIONS */
     header, section {
       max-width: 1100px;
       margin: auto;
@@ -147,7 +148,12 @@
       border-color: var(--blue);
     }
 
-    .core-content { display: none; max-width: 950px; margin: auto; }
+    .core-content {
+      display: none;
+      max-width: 950px;
+      margin: auto;
+    }
+
     .core-content.active { display: block; }
 
     .core-subtitle {
@@ -219,7 +225,7 @@
     <button class="core-tab" onclick="switchCoreTab('hw', this)">Hardware</button>
     <button class="core-tab active" onclick="switchCoreTab('tech', this)">Embedded & Firmware</button>
     <button class="core-tab" onclick="switchCoreTab('aiml', this)">AI / ML</button>
-    
+    <button class="core-tab" onclick="switchCoreTab('debug', this)">Debugging & Tools</button>
   </div>
 
   <div id="tech" class="core-content active">
@@ -247,16 +253,31 @@
     </div>
   </div>
 
+  <div id="debug" class="core-content">
+    <h3 class="core-subtitle">Debugging & Tools</h3>
+    <div class="core-skills">
+      <span>SEGGER Embedded Studio (SES)</span>
+      <span>J-Link Debugger</span>
+      <span>Keil</span>
+      <span>Eclipse</span>
+      <span>OrCAD</span>
+      <span>Oscilloscope</span>
+      <span>Logic Analyzer</span>
+      <span>Multimeter</span>
+      <span>Hardware Debugging</span>
+      <span>Register-Level Debugging</span>
+    </div>
+  </div>
+
   <div id="hw" class="core-content">
     <h3 class="core-subtitle">Hardware & Electronics</h3>
     <div class="core-skills">
       <span>Schematic Design</span>
       <span>Analog Circuit Analysis</span>
-       <span>Datasheet Analysis</span>
+      <span>Datasheet Analysis</span>
       <span>Component Selection</span>
       <span>PCB Layout</span>
-       <span>, PCB Bring-Up</span>
-      <span>PCB Layout</span>
+      <span>PCB Bring-Up</span>
       <span>Power & AFE Design</span>
       <span>OrCAD</span>
     </div>
@@ -320,7 +341,6 @@
     <strong>B.E in Electrical & Electronics Engineering</strong><br>
     JKK College, Erode · 2012 – 2016
   </div>
-
   <div class="box">
     <strong>Diploma in Electrical & Electronics Engineering</strong><br>
     RGP College, Erode · 2010 – 2012
