@@ -13,20 +13,21 @@
   --text:#0f172a;
   --muted:#475569;
   --border:#e5e7eb;
+  --bg:#ffffff;
 }
 
 body{
   margin:0;
   font-family:Segoe UI, Arial, sans-serif;
-  background:#ffffff;
+  background:var(--bg);
   color:var(--text);
-  line-height:1.55;
+  line-height:1.6;
 }
 
 nav{
   display:flex;
   align-items:center;
-  padding:10px 40px;
+  padding:12px 40px;
   border-bottom:1px solid var(--border);
   position:sticky;
   top:0;
@@ -41,14 +42,14 @@ nav a{
 }
 
 section{
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
   padding:40px;
 }
 
 h1{
   color:var(--blue);
-  margin-bottom:30px;
+  margin-bottom:32px;
 }
 
 .grid{
@@ -61,18 +62,17 @@ h1{
   border:1px solid var(--border);
   border-radius:14px;
   padding:22px;
-  transition:0.3s ease;
   background:#fff;
+  transition:0.3s ease;
 }
 
 .card:hover{
   transform:translateY(-6px);
-  box-shadow:0 12px 32px rgba(37,99,235,0.2);
+  box-shadow:0 14px 34px rgba(37,99,235,0.18);
 }
 
 .card h3{
-  margin-top:0;
-  margin-bottom:10px;
+  margin:0 0 10px;
   color:var(--blue);
   font-size:18px;
 }
@@ -117,7 +117,7 @@ h1{
 
 .demo{
   background:var(--blue);
-  color:#ffffff;
+  color:#fff;
 }
 </style>
 </head>
@@ -136,20 +136,13 @@ h1{
   <!-- Smart Eyewear -->
   <div class="card">
     <h3><i class="fa-solid fa-glasses"></i> Smart Eyewear Platform (Titan EyeX2)</h3>
-    <p>
-      Developed a smart eyewear platform based on Qualcomm QCC5171 and Snapdragon AR1.
-      Implemented BLE connectivity, sensor integration, and aggressive power optimization
-      for all-day wearable usage.
-    </p>
-
+    <p>Qualcomm QCC5171 & Snapdragon AR1 based smart eyewear with BLE connectivity, sensor integration, and aggressive power optimization for all-day wearable usage.</p>
     <div class="tags">
       <span class="tag">QCC5171</span>
       <span class="tag">Snapdragon AR1</span>
       <span class="tag">BLE</span>
       <span class="tag">Wearables</span>
-      <span class="tag">Low Power</span>
     </div>
-
     <div class="actions">
       <a class="github" href="#">GitHub</a>
       <a class="demo" href="#">Demo</a>
@@ -159,21 +152,91 @@ h1{
   <!-- Digital Phoropter -->
   <div class="card">
     <h3><i class="fa-solid fa-eye"></i> Digital Phoropter</h3>
-    <p>
-      Designed and developed a digital phoropter for optical measurement and vision testing.
-      Worked on embedded firmware, calibration algorithms, and system validation for retail
-      deployment.
-    </p>
-
+    <p>Optical measurement system with embedded firmware development, calibration algorithms, and validation for large-scale retail deployment.</p>
     <div class="tags">
       <span class="tag">Embedded Firmware</span>
       <span class="tag">Calibration</span>
       <span class="tag">Optical Systems</span>
-      <span class="tag">Medical Devices</span>
     </div>
-
     <div class="actions">
       <a class="github" href="#">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Hydration Wearable -->
+  <div class="card">
+    <h3><i class="fa-solid fa-droplet"></i> Hydration Monitoring Wearable</h3>
+    <p>End-to-end hardware and firmware development of hydration wearable devices using Nordic nRF52832 and nRF52840 with BLE communication and power optimization.</p>
+    <div class="tags">
+      <span class="tag">nRF52832</span>
+      <span class="tag">nRF52840</span>
+      <span class="tag">BLE</span>
+      <span class="tag">Low Power</span>
+    </div>
+  </div>
+
+  <!-- Auto Time Setting -->
+  <div class="card">
+    <h3><i class="fa-solid fa-clock"></i> Auto Time Setting System</h3>
+    <p>Implemented automatic time synchronization using RTC calibration with BLE/NFC based time updates for wearable and embedded devices.</p>
+    <div class="tags">
+      <span class="tag">RTC</span>
+      <span class="tag">BLE</span>
+      <span class="tag">NFC</span>
+    </div>
+  </div>
+
+  <!-- Lens Analyzer -->
+  <div class="card">
+    <h3><i class="fa-solid fa-microchip"></i> Lens Analyzer</h3>
+    <p>Embedded firmware development using TI CCS compiler with complete hardware design, testing, and validation for lens analysis systems.</p>
+    <div class="tags">
+      <span class="tag">TI CCS</span>
+      <span class="tag">Embedded C</span>
+      <span class="tag">Hardware Design</span>
+    </div>
+  </div>
+
+  <!-- Lens Scratch Detection -->
+  <div class="card">
+    <h3><i class="fa-solid fa-magnifying-glass"></i> Lens Scratch & Dent Detection</h3>
+    <p>Python-based image processing system for detecting surface defects using ImageJ, preprocessing, and feature extraction techniques.</p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Image Processing</span>
+      <span class="tag">ImageJ</span>
+    </div>
+  </div>
+
+  <!-- NFC Watch -->
+  <div class="card">
+    <h3><i class="fa-solid fa-wifi"></i> NFC Crownless Watch</h3>
+    <p>NFC-enabled crownless watch development using Epson hardware and Eclipse IDE, focusing on secure communication and low-power firmware.</p>
+    <div class="tags">
+      <span class="tag">NFC</span>
+      <span class="tag">Epson MCU</span>
+      <span class="tag">Eclipse IDE</span>
+    </div>
+  </div>
+
+  <!-- Hoarding Tracking -->
+  <div class="card">
+    <h3><i class="fa-solid fa-camera"></i> Hoarding Tracking System</h3>
+    <p>Linux-based image processing system for outdoor hoarding detection and tracking applications.</p>
+    <div class="tags">
+      <span class="tag">Linux</span>
+      <span class="tag">Image Processing</span>
+    </div>
+  </div>
+
+  <!-- Footfall Counter -->
+  <div class="card">
+    <h3><i class="fa-solid fa-walkie-talkie"></i> Smart Footfall Counter</h3>
+    <p>ESP-3288 based Wi-Fi enabled footfall counting system with real-time data transmission and analytics.</p>
+    <div class="tags">
+      <span class="tag">ESP-3288</span>
+      <span class="tag">Wi-Fi</span>
+      <span class="tag">IoT</span>
     </div>
   </div>
 
