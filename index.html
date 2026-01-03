@@ -58,11 +58,10 @@
       font-weight: 500;
     }
 
-    /* SECTIONS */
     header, section {
       max-width: 1100px;
       margin: auto;
-      padding: 40px 40px;
+      padding: 40px;
       opacity: 0;
       transform: translateY(20px);
       transition: 0.6s ease;
@@ -73,23 +72,9 @@
       transform: translateY(0);
     }
 
-    /* HERO */
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 4px;
-    }
-
-    header h3 {
-      color: var(--blue);
-      font-size: 17px;
-      margin-top: 4px;
-    }
-
-    header p {
-      max-width: 760px;
-      color: var(--muted);
-      margin: 12px 0 10px;
-    }
+    header h1 { font-size: 36px; }
+    header h3 { color: var(--blue); font-size: 17px; }
+    header p { color: var(--muted); max-width: 760px; }
 
     .btn {
       display: inline-block;
@@ -109,7 +94,6 @@
       border: 1px solid var(--blue);
     }
 
-    /* HEADINGS */
     h2 {
       color: var(--blue);
       border-bottom: 2px solid var(--blue);
@@ -119,7 +103,6 @@
       font-size: 22px;
     }
 
-    /* BOX */
     .box {
       background: #ffffff;
       padding: 18px 22px;
@@ -128,15 +111,8 @@
       border: 1px solid var(--border);
     }
 
-    ul {
-      margin: 6px 0 0;
-      padding-left: 18px;
-    }
-
-    li {
-      margin-bottom: 6px;
-      color: var(--muted);
-    }
+    ul { padding-left: 18px; }
+    li { color: var(--muted); margin-bottom: 6px; }
 
     /* CORE COMPETENCIES */
     .core-title {
@@ -169,15 +145,9 @@
       background: var(--blue);
       color: white;
       border-color: var(--blue);
-      box-shadow: 0 4px 12px rgba(37,99,235,0.25);
     }
 
-    .core-content {
-      display: none;
-      max-width: 950px;
-      margin: auto;
-    }
-
+    .core-content { display: none; max-width: 950px; margin: auto; }
     .core-content.active { display: block; }
 
     .core-subtitle {
@@ -220,6 +190,7 @@
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#competencies">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -229,19 +200,14 @@
 <!-- HERO -->
 <header id="home">
   <h1>ARUMUGARAJ</h1>
-  <h3>
-    Embedded Product Development | Qualcomm QCC5171 & AR1 | Smart Wearables & Eyewear
-  </h3>
+  <h3>Embedded Product Development | Qualcomm QCC5171 & AR1</h3>
   <p>
-    Embedded product development professional with strong expertise in electronics,
-    physics, and system design. Proven experience delivering smart wearables,
-    eyewear devices, and retail systems from concept to mass production.
+    Embedded product development professional with expertise in electronics,
+    system design, smart wearables, eyewear devices, and edge AI systems.
   </p>
 
   <a class="btn" href="mailto:raj.rgpc9@gmail.com">Email</a>
-  <a class="btn btn-outline"
-     href="https://linkedin.com/in/arumugaraj07"
-     target="_blank">LinkedIn</a>
+  <a class="btn btn-outline" href="https://linkedin.com/in/arumugaraj07" target="_blank">LinkedIn</a>
   <a class="btn" href="ArumugarajResume1.pdf" download>Resume</a>
 </header>
 
@@ -251,7 +217,8 @@
 
   <div class="core-tabs">
     <button class="core-tab active" onclick="switchCoreTab('tech', this)">Embedded & Firmware</button>
-    <button class="core-tab" onclick="switchCoreTab('hw', this)">Hardware & Electronics</button>
+    <button class="core-tab" onclick="switchCoreTab('aiml', this)">AI / ML</button>
+    <button class="core-tab" onclick="switchCoreTab('hw', this)">Hardware</button>
   </div>
 
   <div id="tech" class="core-content active">
@@ -264,9 +231,18 @@
       <span>Qualcomm AR1</span>
       <span>RTOS (Basics)</span>
       <span>SEGGER Embedded Studio</span>
-      <span>Arduino</span>
+    </div>
+  </div>
+
+  <div id="aiml" class="core-content">
+    <h3 class="core-subtitle">AI / ML & Edge Intelligence</h3>
+    <div class="core-skills">
       <span>Python</span>
-      <span>SQL</span>
+      <span>Scikit-learn</span>
+      <span>Pandas / NumPy</span>
+      <span>Matplotlib</span>
+      <span>SLM</span>
+      <span>Edge-based ML Device Development</span>
     </div>
   </div>
 
@@ -275,12 +251,43 @@
     <div class="core-skills">
       <span>Schematic Design</span>
       <span>Analog Circuit Analysis</span>
-      <span>Datasheet Analysis</span>
       <span>Component Selection</span>
       <span>PCB Layout</span>
-      <span>AFE & Power Selection</span>
+      <span>Power & AFE Design</span>
       <span>OrCAD</span>
     </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="box">
+    <strong>Smart Eyewear Platform (Qualcomm QCC5171 & AR1)</strong>
+    <ul>
+      <li>Embedded firmware and BLE integration</li>
+      <li>Power optimization and production readiness</li>
+      <li>End-to-end product lifecycle ownership</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <strong>Edge-based ML Device Development</strong>
+    <ul>
+      <li>ML model deployment on constrained embedded platforms</li>
+      <li>Data preprocessing using Python & NumPy</li>
+      <li>Inference optimization for low-power devices</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <strong>Digital Phoropter & Lens Analyzer</strong>
+    <ul>
+      <li>Hardware + firmware for optical measurement systems</li>
+      <li>Sensor calibration and validation</li>
+      <li>Multiple patented implementations</li>
+    </ul>
   </div>
 </section>
 
@@ -290,33 +297,11 @@
 
   <div class="box">
     <strong>Manager – Embedded Product Development</strong><br>
-    Titan Company Limited · Bangalore · Apr 2022 – Present
+    Titan Company Limited · Apr 2022 – Present
     <ul>
-      <li>Led smart wearable and retail device development from concept to mass production</li>
-      <li>Owned full product lifecycle: prototyping, pilot builds, production readiness</li>
-      <li>Built PRDs, product roadmaps, budgets, and vendor negotiations</li>
-      <li>Eyewear development using Qualcomm QCC5171 and AR1 platforms</li>
-      <li>Led digital phoropter hardware and software development</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <strong>Technical Executive</strong><br>
-    Titan Company Limited · Apr 2016 – Mar 2020
-    <ul>
-      <li>Hardware design & development for wearable and IoT products</li>
-      <li>BLE, Bluetooth, and IoT system integration</li>
-      <li>PCB fabrication, assembly, testing, and debugging</li>
-      <li>MCU ADC programming for voltage, current, and temperature sensing</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <strong>Engineer</strong><br>
-    Aqua Sub Engineering · Coimbatore · Apr 2012 – Apr 2013
-    <ul>
-      <li>Preventive and breakdown maintenance</li>
-      <li>AC/DC motor control and PLC panel wiring</li>
+      <li>Smart wearable and retail device development</li>
+      <li>Product roadmap, PRD, vendor management</li>
+      <li>Qualcomm QCC5171 & AR1 platform leadership</li>
     </ul>
   </div>
 </section>
@@ -324,44 +309,25 @@
 <!-- EDUCATION -->
 <section id="education">
   <h2>Education</h2>
-
   <div class="box">
-    <strong>M.Tech in Data Science & AI (WILP)</strong><br>
-    PES University, Bangalore · Jul 2025
-  </div>
-
-  <div class="box">
-    <strong>B.E in Electrical & Electronics Engineering</strong><br>
-    JKK College, Erode · 2012 – 2016
-  </div>
-
-  <div class="box">
-    <strong>Diploma in Electrical & Electronics Engineering</strong><br>
-    RGP College, Erode · 2010 – 2012
+    <strong>M.Tech – Data Science & AI</strong> · PES University
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-  <p>
-    📧 <strong>raj.rgpc9@gmail.com</strong><br>
-    📞 +91 9880741188
-  </p>
+  <p>📧 <strong>raj.rgpc9@gmail.com</strong> | 📞 +91 9880741188</p>
 </section>
 
-<footer>
-  © 2026 Arumugaraj · Portfolio
-</footer>
+<footer>© 2026 Arumugaraj · Portfolio</footer>
 
 <script>
   const sections = document.querySelectorAll("header, section");
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("show");
-    });
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("show"));
   }, { threshold: 0.1 });
-  sections.forEach(section => observer.observe(section));
+  sections.forEach(s => observer.observe(s));
 
   function switchCoreTab(id, btn) {
     document.querySelectorAll(".core-tab").forEach(b => b.classList.remove("active"));
