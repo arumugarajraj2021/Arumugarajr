@@ -38,11 +38,7 @@
       z-index: 10;
     }
 
-    nav h2 {
-      margin: 0;
-      color: var(--blue);
-      font-size: 18px;
-    }
+    nav h2 { margin: 0; color: var(--blue); font-size: 18px; }
 
     nav ul {
       list-style: none;
@@ -58,7 +54,6 @@
       font-weight: 500;
     }
 
-    /* SECTIONS */
     header, section {
       max-width: 1100px;
       margin: auto;
@@ -148,12 +143,7 @@
       border-color: var(--blue);
     }
 
-    .core-content {
-      display: none;
-      max-width: 950px;
-      margin: auto;
-    }
-
+    .core-content { display: none; max-width: 950px; margin: auto; }
     .core-content.active { display: block; }
 
     .core-subtitle {
@@ -196,7 +186,7 @@
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#competencies">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="projects.html">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -223,10 +213,10 @@
   <h2 class="core-title">Core Competencies</h2>
 
   <div class="core-tabs">
-    <button class="core-tab" onclick="switchCoreTab('hw', this)">Hardware</button>
     <button class="core-tab active" onclick="switchCoreTab('tech', this)">Embedded & Firmware</button>
     <button class="core-tab" onclick="switchCoreTab('aiml', this)">AI / ML</button>
     <button class="core-tab" onclick="switchCoreTab('debug', this)">Debugging & Tools</button>
+    <button class="core-tab" onclick="switchCoreTab('hw', this)">Hardware</button>
   </div>
 
   <div id="tech" class="core-content active">
@@ -261,11 +251,9 @@
       <span>J-Link Debugger</span>
       <span>Keil</span>
       <span>Eclipse</span>
-      <span>OrCAD</span>
       <span>Oscilloscope</span>
       <span>Logic Analyzer</span>
       <span>Multimeter</span>
-      <span>Hardware Debugging</span>
       <span>Register-Level Debugging</span>
     </div>
   </div>
@@ -274,46 +262,11 @@
     <h3 class="core-subtitle">Hardware & Electronics</h3>
     <div class="core-skills">
       <span>Schematic Design</span>
-      <span>Analog Circuit Analysis</span>
-      <span>Datasheet Analysis</span>
+      <span>PCB Layout & Bring-Up</span>
       <span>Component Selection</span>
-      <span>PCB Layout</span>
-      <span>PCB Bring-Up</span>
       <span>Power & AFE Design</span>
       <span>OrCAD</span>
     </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="box">
-    <strong>Smart Eyewear Platform (Qualcomm QCC5171 & AR1)</strong>
-    <ul>
-      <li>Embedded firmware and BLE integration</li>
-      <li>Power optimization and production readiness</li>
-      <li>End-to-end product lifecycle ownership</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <strong>Edge-based ML Device Development</strong>
-    <ul>
-      <li>ML model deployment on constrained embedded platforms</li>
-      <li>Data preprocessing using Python & NumPy</li>
-      <li>Inference optimization for low-power devices</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <strong>Digital Phoropter & Lens Analyzer</strong>
-    <ul>
-      <li>Hardware + firmware for optical measurement systems</li>
-      <li>Sensor calibration and validation</li>
-      <li>Multiple patented implementations</li>
-    </ul>
   </div>
 </section>
 
@@ -324,27 +277,38 @@
   <div class="box">
     <strong>Manager – Embedded Product Development</strong><br>
     Titan Company Limited · Apr 2022 – Present
-    <ul>
-      <li>Smart wearable and retail device development</li>
-      <li>Product roadmap, PRD, vendor management</li>
-      <li>Qualcomm QCC5171 & AR1 platform leadership</li>
-    </ul>
+  </div>
+
+  <div class="box">
+    <strong>Assistant Manager – Embedded Systems</strong><br>
+    Titan Company Limited · Apr 2020 – Mar 2022
+  </div>
+
+  <div class="box">
+    <strong>Technical Executive</strong><br>
+    Titan Company Limited · Apr 2016 – Mar 2020
+  </div>
+
+  <div class="box">
+    <strong>Engineer</strong><br>
+    Aqua Sub Engineering · Apr 2012 – Apr 2013
   </div>
 </section>
 
 <!-- EDUCATION -->
 <section id="education">
   <h2>Education</h2>
+
   <div class="box">
     <strong>M.Tech – Data Science & AI</strong> · PES University
   </div>
+
   <div class="box">
-    <strong>B.E in Electrical & Electronics Engineering</strong><br>
-    JKK College, Erode · 2012 – 2016
+    <strong>B.E – Electrical & Electronics Engineering</strong> · JKK College
   </div>
+
   <div class="box">
-    <strong>Diploma in Electrical & Electronics Engineering</strong><br>
-    RGP College, Erode · 2010 – 2012
+    <strong>Diploma – Electrical & Electronics Engineering</strong> · RGP College
   </div>
 </section>
 
