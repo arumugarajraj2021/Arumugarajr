@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Arumugaraj | Embedded Product Development</title>
+  <title>Arumugaraj | Manager – Technical</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    html { scroll-behavior: smooth; }
-    * { box-sizing: border-box; }
-
     :root {
-      --blue: #2563eb;
-      --blue-light: #eff6ff;
-      --text: #0f172a;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #020617;
       --muted: #475569;
+      --accent: #2563eb;
       --border: #e5e7eb;
     }
 
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #ffffff;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.55;
+      line-height: 1.65;
     }
 
     /* NAV */
@@ -30,338 +30,261 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 40px;
+      padding: 12px 48px;
       background: #ffffff;
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
 
-    nav h2 {
-      margin: 0;
-      color: var(--blue);
+    nav strong {
+      color: var(--accent);
       font-size: 18px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 22px;
-      margin: 0;
-      padding: 0;
     }
 
     nav a {
       color: var(--muted);
+      margin-left: 26px;
       text-decoration: none;
       font-weight: 500;
     }
 
-    /* SECTIONS */
-    header, section {
-      max-width: 1100px;
+    /* HERO */
+    .hero {
+      max-width: 900px;
       margin: auto;
-      padding: 40px 40px;
+      padding: 80px 40px 50px;
+      text-align: center;
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
       transition: 0.6s ease;
     }
+    .hero.show { opacity: 1; transform: translateY(0); }
 
-    header.show, section.show {
-      opacity: 1;
-      transform: translateY(0);
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 6px;
     }
 
-    /* HERO */
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 4px;
+    .hero h2 {
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 10px;
+      font-size: 20px;
     }
 
-    header h3 {
-      color: var(--blue);
-      font-size: 17px;
-      margin-top: 4px;
-    }
-
-    header p {
-      max-width: 760px;
+    .hero p {
       color: var(--muted);
-      margin: 12px 0 10px;
+      margin-top: 18px;
+      font-size: 16px;
     }
 
     .btn {
       display: inline-block;
-      padding: 9px 20px;
-      margin: 8px 8px 0 0;
-      border-radius: 6px;
+      margin: 22px 10px 0 0;
+      padding: 12px 26px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 14px;
       color: white;
-      background: var(--blue);
+      background: var(--accent);
     }
 
-    .btn-outline {
-      background: white;
-      color: var(--blue);
-      border: 1px solid var(--blue);
-    }
+    .btn.secondary { background: #334155; }
 
-    /* HEADINGS */
-    h2 {
-      color: var(--blue);
-      border-bottom: 2px solid var(--blue);
-      display: inline-block;
-      padding-bottom: 4px;
-      margin-bottom: 16px;
-      font-size: 22px;
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 40px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.6s ease;
     }
+    section.show { opacity: 1; transform: translateY(0); }
 
-    /* BOX */
-    .box {
-      background: #ffffff;
-      padding: 18px 22px;
-      border-radius: 10px;
-      margin-bottom: 14px;
-      border: 1px solid var(--border);
-    }
-
-    ul {
-      margin: 6px 0 0;
-      padding-left: 18px;
-    }
-
-    li {
-      margin-bottom: 6px;
-      color: var(--muted);
-    }
-
-    /* CORE COMPETENCIES */
-    .core-title {
-      text-align: center;
+    h3.section-title {
       font-size: 24px;
-      color: var(--blue);
-      margin-bottom: 18px;
+      margin-bottom: 22px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    /* CARD */
+    .card {
+      background: var(--card);
+      padding: 22px 26px;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+    }
+
+    /* ================= CORE COMPETENCIES (TAB UI) ================= */
+
+    .core-competencies {
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    .core-title {
+      font-size: 30px;
+      color: var(--accent);
+      margin-bottom: 30px;
     }
 
     .core-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
+      display: inline-flex;
+      background: #ffffff;
+      padding: 6px;
+      border-radius: 999px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
     }
 
     .core-tab {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      padding: 8px 18px;
+      border: none;
+      background: transparent;
+      padding: 14px 28px;
       border-radius: 999px;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 600;
       cursor: pointer;
-      color: var(--muted);
+      color: #64748b;
     }
 
     .core-tab.active {
-      background: var(--blue);
+      background: var(--accent);
       color: white;
-      border-color: var(--blue);
-      box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+      box-shadow: 0 6px 20px rgba(37,99,235,0.4);
     }
 
     .core-content {
       display: none;
-      max-width: 950px;
+      max-width: 900px;
       margin: auto;
+      text-align: left;
+      animation: fadeCore 0.3s ease;
     }
 
     .core-content.active { display: block; }
 
     .core-subtitle {
-      font-size: 17px;
-      color: var(--blue);
-      margin-bottom: 12px;
+      font-size: 22px;
+      color: var(--accent);
+      margin-bottom: 20px;
     }
 
     .core-skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 14px;
     }
 
     .core-skills span {
-      background: var(--blue-light);
-      border: 1px solid #dbeafe;
-      padding: 7px 14px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 12px 22px;
       border-radius: 999px;
-      font-size: 13px;
-      color: #1e40af;
-      font-weight: 500;
+      font-size: 14px;
+      color: #334155;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
     }
 
+    @keyframes fadeCore {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 18px;
+      padding: 30px;
+      background: #ffffff;
       border-top: 1px solid var(--border);
       color: var(--muted);
-      font-size: 13px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-  <h2>ARUMUGARAJ</h2>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#competencies">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <strong>ARUMUGARAJ</strong>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#competencies">Competencies</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
-<header id="home">
-  <h1>ARUMUGARAJ</h1>
-  <h3>
-    Embedded Product Development | Qualcomm QCC5171 & AR1 | Smart Wearables & Eyewear
-  </h3>
+<div class="hero observe" id="home">
+  <h1>Arumugaraj</h1>
+  <h2>Manager – Technical | Embedded Systems | IoT</h2>
   <p>
-    Embedded product development professional with strong expertise in electronics,
-    physics, and system design. Proven experience delivering smart wearables,
-    eyewear devices, and retail systems from concept to mass production.
+    Experienced in embedded product development with strong analytical skills and
+    deep knowledge of physics, electronics, and system design.
   </p>
 
-  <a class="btn" href="mailto:raj.rgpc9@gmail.com">Email</a>
-  <a class="btn btn-outline"
-     href="https://linkedin.com/in/arumugaraj07"
-     target="_blank">LinkedIn</a>
-  <a class="btn" href="ArumugarajResume1.pdf" download>Resume</a>
-</header>
+  <a class="btn" href="#competencies">View Skills</a>
+  <a class="btn secondary" href="mailto:raj.rgpc9@gmail.com">Email</a>
+</div>
 
 <!-- CORE COMPETENCIES -->
-<section id="competencies">
-  <h2 class="core-title">Core Competencies</h2>
+<section class="observe core-competencies" id="competencies">
+  <h3 class="core-title">Core Competencies</h3>
 
   <div class="core-tabs">
-    <button class="core-tab active" onclick="switchCoreTab('tech', this)">Embedded & Firmware</button>
-    <button class="core-tab" onclick="switchCoreTab('hw', this)">Hardware & Electronics</button>
+    <button class="core-tab active" onclick="switchCoreTab('tech', this)">Technical Stack</button>
+    <button class="core-tab" onclick="switchCoreTab('ai', this)">AI/ML & Cognitive</button>
+    <button class="core-tab" onclick="switchCoreTab('cloud', this)">Cloud & Infrastructure</button>
   </div>
 
   <div id="tech" class="core-content active">
-    <h3 class="core-subtitle">Embedded & Firmware</h3>
+    <h4 class="core-subtitle">&lt;/&gt; Technical Stack</h4>
     <div class="core-skills">
-      <span>Embedded C / C++</span>
-      <span>ARM Cortex-M</span>
-      <span>nRF52840</span>
-      <span>Qualcomm QCC5171</span>
-      <span>Qualcomm AR1</span>
-      <span>RTOS (Basics)</span>
-      <span>SEGGER Embedded Studio</span>
-      <span>Arduino</span>
-      <span>Python</span>
-      <span>SQL</span>
+      <span>Python</span><span>Flask</span><span>Django</span>
+      <span>React & UI/UX</span><span>SQL</span><span>HTML/CSS/JS</span>
+      <span>PowerShell</span><span>Git</span><span>GitHub</span>
+      <span>VS Code</span><span>Jupyter Notebook</span>
     </div>
   </div>
 
-  <div id="hw" class="core-content">
-    <h3 class="core-subtitle">Hardware & Electronics</h3>
+  <div id="ai" class="core-content">
+    <h4 class="core-subtitle">AI / ML & Cognitive</h4>
     <div class="core-skills">
-      <span>Schematic Design</span>
-      <span>Analog Circuit Analysis</span>
-      <span>Datasheet Analysis</span>
-      <span>Component Selection</span>
-      <span>PCB Layout</span>
-      <span>AFE & Power Selection</span>
-      <span>OrCAD</span>
+      <span>Machine Learning</span>
+      <span>Predictive Analytics</span>
+      <span>Automation</span>
+      <span>Data Processing</span>
+    </div>
+  </div>
+
+  <div id="cloud" class="core-content">
+    <h4 class="core-subtitle">Cloud & Infrastructure</h4>
+    <div class="core-skills">
+      <span>Azure Functions</span>
+      <span>Service Bus</span>
+      <span>CI / CD</span>
+      <span>Deployment Automation</span>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <h2>Experience</h2>
-
-  <div class="box">
-    <strong>Manager – Embedded Product Development</strong><br>
-    Titan Company Limited · Bangalore · Apr 2022 – Present
-    <ul>
-      <li>Led smart wearable and retail device development from concept to mass production</li>
-      <li>Owned full product lifecycle: prototyping, pilot builds, production readiness</li>
-      <li>Built PRDs, product roadmaps, budgets, and vendor negotiations</li>
-      <li>Eyewear development using Qualcomm QCC5171 and AR1 platforms</li>
-      <li>Led digital phoropter hardware and software development</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <strong>Technical Executive</strong><br>
-    Titan Company Limited · Apr 2016 – Mar 2020
-    <ul>
-      <li>Hardware design & development for wearable and IoT products</li>
-      <li>BLE, Bluetooth, and IoT system integration</li>
-      <li>PCB fabrication, assembly, testing, and debugging</li>
-      <li>MCU ADC programming for voltage, current, and temperature sensing</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <strong>Engineer</strong><br>
-    Aqua Sub Engineering · Coimbatore · Apr 2012 – Apr 2013
-    <ul>
-      <li>Preventive and breakdown maintenance</li>
-      <li>AC/DC motor control and PLC panel wiring</li>
-    </ul>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-  <h2>Education</h2>
-
-  <div class="box">
-    <strong>M.Tech in Data Science & AI (WILP)</strong><br>
-    PES University, Bangalore · Jul 2025
-  </div>
-
-  <div class="box">
-    <strong>B.E in Electrical & Electronics Engineering</strong><br>
-    JKK College, Erode · 2012 – 2016
-  </div>
-
-  <div class="box">
-    <strong>Diploma in Electrical & Electronics Engineering</strong><br>
-    RGP College, Erode · 2010 – 2012
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    📧 <strong>raj.rgpc9@gmail.com</strong><br>
-    📞 +91 9880741188
-  </p>
-</section>
-
-<footer>
-  © 2026 Arumugaraj · Portfolio
+<footer id="contact">
+  <b>Arumugaraj</b><br>
+  📧 raj.rgpc9@gmail.com | 📞 +91 9880741188<br>
+  🔗 <a href="https://linkedin.com/in/arumugaraj-cts-712515211" target="_blank">LinkedIn</a>
 </footer>
 
 <script>
-  const sections = document.querySelectorAll("header, section");
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("show");
-    });
-  }, { threshold: 0.1 });
-  sections.forEach(section => observer.observe(section));
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("show"));
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(".observe")
+    .forEach(el => observer.observe(el));
 
   function switchCoreTab(id, btn) {
     document.querySelectorAll(".core-tab").forEach(b => b.classList.remove("active"));
